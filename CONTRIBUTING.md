@@ -12,7 +12,8 @@ Los cambios que incorporen clasificación semántica con LLMs, dependencias exte
 
 1. Revisá el [README](README.md), la configuración de ejemplo y las pruebas existentes.
 2. Para cambios no triviales, abrí una issue en GitHub con objetivo, alcance, criterios de aceptación y riesgos.
-3. Verificá que la propuesta no reduzca las garantías del gate previo al agente ni amplíe la superficie de acceso del plugin sin una justificación explícita.
+3. Esperá el triage de los mantenedores antes de comenzar una implementación que vaya a proponerse para integración.
+4. Verificá que la propuesta no reduzca las garantías del gate previo al agente ni amplíe la superficie de acceso del plugin sin una justificación explícita.
 
 ## Entorno y verificaciones
 
@@ -38,13 +39,15 @@ No incluyas credenciales, tokens, archivos `.env`, logs con contenido de convers
 
 ## Flujo de trabajo
 
-El repositorio utiliza GitHub y actualmente publica desde `main`.
+El repositorio utiliza GitHub y publica desde `main`. La rama está protegida: no se aceptan pushes directos, force-pushes ni borrados.
 
-1. Creá una rama desde `main` con el formato `feature/<issue>-<resumen>` o `fix/<issue>-<resumen>`.
-2. Hacé commits pequeños usando Conventional Commits, con descripciones en español.
-3. Actualizá las pruebas y la documentación cuando el cambio altere comportamiento, configuración o compatibilidad.
-4. Publicá la rama y abrí una Pull Request hacia `main`.
-5. En la Pull Request describí el cambio, las verificaciones ejecutadas, riesgos y la issue relacionada cuando exista.
+1. Abrí una issue y esperá su triage antes de preparar una propuesta de cambio.
+2. Creá un fork del repositorio y una rama desde `main` con el formato `feature/<issue>-<resumen>` o `fix/<issue>-<resumen>`.
+3. Hacé commits pequeños usando Conventional Commits, con descripciones en español.
+4. Actualizá las pruebas y la documentación cuando el cambio altere comportamiento, configuración o compatibilidad.
+5. Publicá la rama en tu fork y abrí una Pull Request hacia `main`.
+6. En la Pull Request describí el cambio, las verificaciones ejecutadas, riesgos y la issue relacionada.
+7. La integración requiere una aprobación de un propietario de código y la resolución de todas las conversaciones.
 
 Ejemplos de commits:
 
@@ -68,6 +71,10 @@ docs: aclarar el modo de auditoría
 El proyecto usa Semantic Versioning. Las versiones se declaran en `package.json`, se etiquetan como `vX.Y.Z` y se publican mediante GitHub Releases desde `main`.
 
 Las notas de cada release deben indicar los cambios funcionales, las verificaciones realizadas y los riesgos o límites relevantes.
+
+## Mantenedores y revisiones
+
+Los propietarios de código definidos en [CODEOWNERS](.github/CODEOWNERS) revisan los cambios antes de integrarlos. Las issues están abiertas a la comunidad; abrir una issue o un Pull Request no concede permisos de escritura en el repositorio.
 
 ## Seguridad y divulgación responsable
 
