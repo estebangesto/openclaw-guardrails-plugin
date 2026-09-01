@@ -1,0 +1,17 @@
+{
+  "plugins": {
+    "allow": ["openclaw-guardrails"],
+    "entries": {
+      "openclaw-guardrails": {
+        "enabled": true,
+        "hooks": { "allowConversationAccess": true },
+        "config": {
+          "inboundMode": "block",
+          "outboundMode": "audit",
+          "blockedRules": ["secrets"],
+          "logFile": "/var/lib/openclaw/guardrails-audit.jsonl"
+        }
+      }
+    }
+  }
+}

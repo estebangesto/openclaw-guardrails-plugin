@@ -1,0 +1,19 @@
+{
+  "name": "openclaw-guardrails-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Guardrails deterministas de entrada y salida para OpenClaw.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.7.1"
+  },
+  "openclaw": {
+    "extensions": ["./index.js"]
+  }
+}

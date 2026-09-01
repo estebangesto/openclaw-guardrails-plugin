@@ -1,0 +1,20 @@
+{
+  "id": "openclaw-guardrails",
+  "name": "OpenClaw Guardrails",
+  "description": "Guardrails deterministas de entrada y salida, configurables por política.",
+  "activation": { "onStartup": true },
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "inboundMode": { "enum": ["audit", "block"], "default": "block" },
+      "outboundMode": { "enum": ["audit", "block"], "default": "audit" },
+      "blockedRules": {
+        "type": "array",
+        "items": { "type": "string", "enum": ["prompt_injection", "secrets", "admin_action"] },
+        "default": ["secrets"]
+      },
+      "logFile": { "type": "string" }
+    },
+    "additionalProperties": false
+  }
+}
