@@ -88,6 +88,6 @@ npm test
 - Para clasificación semántica se puede integrar NeMo Guardrails, Llama Guard u otro clasificador detrás de los mismos hooks.
 - El bloqueo de salida suprime el envío; antes de usarlo en producción se recomienda probarlo en `audit` y definir un mecanismo alternativo de notificación.
 
-## Estado
+## Licencia
 
-Versión inicial de referencia. No incluye licencia todavía; definila antes de distribuir o reutilizar el código fuera del repositorio.
+Distribuido bajo [Apache License 2.0](LICENSE).

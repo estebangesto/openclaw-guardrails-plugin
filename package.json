@@ -2,6 +2,7 @@
   "name": "openclaw-guardrails-plugin",
   "version": "0.1.0",
   "private": true,
+  "license": "Apache-2.0",
   "description": "Guardrails deterministas de entrada y salida para OpenClaw.",
   "type": "module",
   "engines": {
